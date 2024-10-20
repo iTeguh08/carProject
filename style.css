@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, #3d3b3b, #c3c9cf, #222121);
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.header-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    padding-bottom: 50px;
+    margin-left: 40px;
+    height: 94vh;
+    width: 95vw;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.header{
+    background: linear-gradient(100deg, #222121, #999999);
+    color:rgba(255, 127, 0, 1);
+    text-align: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lamboLogo{
+    height: 65px;
+    margin-right: 25px;
+}
+
+.panel-row {
+    display: flex;
+    height: 80%;
+}
+
+.panel {
+    margin-top: 45px !important;
+    background-size: cover;
+    background-position: center;
+    height: 90%;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    flex: 0.6;
+    margin: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: all 400ms ease-in;
+    transition: transform 0.4s ease, flex 0.4s ease;
+}
+
+.panel button{
+    display: none!important;
+}
+
+.panel.active button{
+    display: block!important;
+}
+
+.panel-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 40px 40px; /* Disesuaikan dengan border-radius panel */
+    opacity: 0;
+        
+}
+
+.panel.active .panel-content {
+    opacity: 1;
+}
+
+.panel.active {
+    flex: 0.7;
+    transform: scale(1.05);
+    margin-top: 35px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.btnSound div{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-right: 4px;
+}
+
+.btnSound {
+    font-family: sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 15px;
+}
+
+.btnSound:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.panel:hover{
+    outline: 2px solid white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1)
+}
+
+.soundIcon{
+    margin-left: 3px;
+    width: 30px;
+    height: 30px;
+}
+
+.panel h3 {
+    background-color: rgba(225, 225, 0, 0.5);
+    font-size: 20px;
+    margin: 0;
+    padding: 5px;
+    padding-left: 13px;
+    border-radius: 5px;
+    display: flex; /* Menjadikan h3 sebagai flex container */
+    align-items: center; /* Memposisikan elemen dalam h3 secara vertikal di tengah */
+    justify-content: space-between; /* Memisahkan teks nama mobil dan tombol audio */
+}
